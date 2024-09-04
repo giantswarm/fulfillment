@@ -1,27 +1,14 @@
-# General Go template repository
+# fulfillment
 
-This is a general template repository containing some basic files every GitHub repo owned by Giant Swarm should have.
+`fulfillment` is a service for fulfilling marketplace orders.
 
-Note also these more specific repositories:
+## Amazon Web Services
 
-- [template-app](https://github.com/giantswarm/template-app)
-- [gitops-template](https://github.com/giantswarm/gitops-template)
-- [python-app-template](https://github.com/giantswarm/python-app-template)
+To transact via AWS:
 
-## Creating a new repository
+- A customer purchases Giant Swarm via the AWS Marketplace.
+- The customer is redirected to the `fulfillment` service webhook, with a token.
+- The `fulfillment` service renders a webpage with a form (with the token embedded), so the customer can add their email address.
+- When the form is submitted, the `fulfillment` service requests data from AWS about the customer's subscription using the token. This information is then sent to Slack with the customer's email, where operations then reaches out to the customer via the email.
 
-Please do not use the `Use this template` function in the GitHub web UI.
-
-Check out the according [handbook article](https://handbook.giantswarm.io/docs/dev-and-releng/repository/go/) for better instructions.
-
-### Some suggestions for your README
-
-After you have created your new repository, you may want to add some of these badges to the top of your README.
-
-- **CircleCI:** After enabling builds for this repo via [this link](https://circleci.com/setup-project/gh/giantswarm/aws-fulfillment), you can find badge code on [this page](https://app.circleci.com/settings/project/github/giantswarm/aws-fulfillment/status-badges).
-
-- **Go reference:** use [this helper](https://pkg.go.dev/badge/) to create the markdown code.
-
-- **Go report card:** enter the module name on the [front page](https://goreportcard.com/) and hit "Generate report". Then use this markdown code for your badge: `[![Go report card](https://goreportcard.com/badge/github.com/giantswarm/aws-fulfillment)](https://goreportcard.com/report/github.com/giantswarm/aws-fulfillment)`
-
-- **Sourcegraph "used by N projects" badge**: for public Go repos only: `[![Sourcegraph](https://sourcegraph.com/github.com/giantswarm/aws-fulfillment/-/badge.svg)](https://sourcegraph.com/github.com/giantswarm/aws-fulfillment)`
+See [here](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-products.html) for AWS documentation. [This page](https://docs.aws.amazon.com/marketplace/latest/userguide/saas-product-customer-setup.html) specifically details the process on how a customer fulfills via the AWS Marketplace.

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fulfillment
+  namespace: fulfillment
+spec:
+  selector:
+    app: fulfillment
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
