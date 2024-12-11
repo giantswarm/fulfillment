@@ -3,6 +3,6 @@ description: A Helm chart for fulfillment
 home: https://github.com/giantswarm/fulfillment
 icon: https://s.giantswarm.io/app-icons/prometheus/1/light.svg
 name: fulfillment
-version: 0.0.1
+version: 0.0.3
 annotations:
   application.giantswarm.io/team: "planeteers"
