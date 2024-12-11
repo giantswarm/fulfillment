@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fulfillment
+  namespace: fulfillment
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-giantswarm
+    kubernetes.io/tls-acme: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: fulfillment.giantswarm.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fulfillment
+            port:
+              number: 8000
+  tls:
+  - hosts:
+    - fulfillment.giantswarm.io
+    secretName: fulfillment-tls

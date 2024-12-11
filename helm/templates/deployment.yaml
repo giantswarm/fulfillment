@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fulfillment
+  namespace: fulfillment
+  labels:
+    app: fulfillment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fulfillment
+  template:
+    metadata:
+      labels:
+        app: fulfillment
+    spec:
+      containers:
+      - name: fulfillment
+        image: gsoci.azurecr.io/giantswarm/fulfillment:{{ .Chart.Version }}
+        args: ["server"]
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "50m"
+          limits:
+            memory: "100Mi"
+            cpu: "50m"
+        env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: fulfillment
+              key: AWS_ACCESS_KEY_ID
+              optional: false
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: fulfillment
+              key: AWS_SECRET_ACCESS_KEY
+              optional: false
+        - name: SLACK_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: fulfillment
+              key: SLACK_TOKEN
+              optional: false
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+              - ALL
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchLabels:
+                  app: fulfillment
+              topologyKey: "kubernetes.io/hostname"
