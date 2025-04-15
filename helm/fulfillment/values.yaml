@@ -2,5 +2,10 @@ aws:
   access_key_id: ""
   secret_access_key: ""
 
+ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-giantswarm
+    kubernetes.io/tls-acme: "true"
+
 slack:
   token: ""
