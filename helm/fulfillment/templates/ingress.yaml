@@ -3,9 +3,10 @@ kind: Ingress
 metadata:
   name: fulfillment
   namespace: fulfillment
+  {{- with .Values.ingress.annotations }}
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-giantswarm
-    kubernetes.io/tls-acme: "true"
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   ingressClassName: nginx
   rules:

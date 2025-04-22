@@ -13,6 +13,22 @@
                 }
             }
         },
+        "ingress": {
+            "type": "object",
+            "properties": {
+                "annotations": {
+                    "type": "object",
+                    "properties": {
+                        "cert-manager.io/cluster-issuer": {
+                            "type": "string"
+                        },
+                        "kubernetes.io/tls-acme": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "slack": {
             "type": "object",
             "properties": {
