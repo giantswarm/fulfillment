@@ -54,7 +54,7 @@ func rootPost(w http.ResponseWriter, r *http.Request, c aws.Service, s slack.Ser
 	// Note: AWS sends us an opaque token, but it's essentially a base64 string,
 	// and + is a valid base64 character (see https://datatracker.ietf.org/doc/html/rfc4648#section-4),
 	// but browsers will convert it to a space when POSTed as part of a form. So, we hackily convert it back here.
-	unescapedToken = strings.Replace(unescapedToken, " ", "+", -1)
+	unescapedToken = strings.ReplaceAll(unescapedToken, " ", "+")
 
 	customerData, err := c.FetchCustomerData(unescapedToken)
 	if err != nil {
