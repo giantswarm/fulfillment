@@ -9,7 +9,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.25.7
 	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.25.7
 	github.com/nlopes/slack v0.6.0
-	github.com/spf13/cobra v1.8.1
+	github.com/spf13/cobra v1.10.1
 )
 
 require (
@@ -27,5 +27,5 @@ require (
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/pkg/errors v0.8.0 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/spf13/pflag v1.0.9 // indirect
 )
