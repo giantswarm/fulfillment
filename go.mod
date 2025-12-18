@@ -9,7 +9,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.25.7
 	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.25.7
 	github.com/nlopes/slack v0.6.0
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 )
 
 require (
