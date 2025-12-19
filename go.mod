@@ -3,11 +3,11 @@ module github.com/giantswarm/fulfillment
 go 1.22.5
 
 require (
-	github.com/aws/aws-sdk-go v1.55.5
-	github.com/aws/aws-sdk-go-v2/config v1.28.6
-	github.com/aws/aws-sdk-go-v2/credentials v1.17.47
-	github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.25.7
-	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.25.7
+	github.com/aws/aws-sdk-go v1.55.8
+	github.com/aws/aws-sdk-go-v2/config v1.32.6
+	github.com/aws/aws-sdk-go-v2/credentials v1.19.6
+	github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.35.4
+	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.35.4
 	github.com/nlopes/slack v0.6.0
 	github.com/spf13/cobra v1.10.2
 )
