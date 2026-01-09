@@ -2,7 +2,7 @@ module github.com/giantswarm/fulfillment
 
 go 1.23
 
-toolchain go1.24.11
+toolchain go1.25.5
 
 require (
 	github.com/aws/aws-sdk-go v1.55.8
