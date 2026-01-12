@@ -16,6 +16,9 @@
         "ingress": {
             "type": "object",
             "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
                 "annotations": {
                     "type": "object",
                     "properties": {
@@ -24,6 +27,73 @@
                         },
                         "kubernetes.io/tls-acme": {
                             "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "route": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "kind": {
+                    "type": "string"
+                },
+                "annotations": {
+                    "type": "object"
+                },
+                "labels": {
+                    "type": "object"
+                },
+                "hostnames": {
+                    "type": "array"
+                },
+                "parentRefs": {
+                    "type": "array"
+                },
+                "matches": {
+                    "type": "array"
+                },
+                "filters": {
+                    "type": "array"
+                },
+                "additionalRules": {
+                    "type": "array"
+                },
+                "securityPolicy": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "labels": {
+                            "type": "object"
+                        },
+                        "annotations": {
+                            "type": "object"
+                        },
+                        "basicAuth": {
+                            "type": "object"
+                        },
+                        "cors": {
+                            "type": "object"
+                        },
+                        "jwt": {
+                            "type": "object"
+                        },
+                        "oidc": {
+                            "type": "object"
+                        },
+                        "extAuth": {
+                            "type": "object"
+                        },
+                        "authorization": {
+                            "type": "object"
                         }
                     }
                 }
