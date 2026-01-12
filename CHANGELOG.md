@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.4] - 2026-01-12
 
+### Added
+
+- Add HTTP route resource to migrate to Gateway API.
+
+
 ## [0.0.3] - 2024-12-11
 
 ## [0.0.2] - 2024-12-11
