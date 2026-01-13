@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.5] - 2026-01-13
 
+### Changed
+
+- Upgraded to aws sdk go version 2
+
 ## [0.0.4] - 2026-01-12
 
 ### Added
