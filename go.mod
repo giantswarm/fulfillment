@@ -9,7 +9,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/config v1.32.28
 	github.com/aws/aws-sdk-go-v2/credentials v1.19.27
 	github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.39.0
-	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.38.0
+	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.38.1
 	github.com/nlopes/slack v0.6.0
 	github.com/spf13/cobra v1.10.2
 )
