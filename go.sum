@@ -16,8 +16,8 @@ github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.13 h1:mbRIur
 github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.13/go.mod h1:ITg9em2KbJx1s0y4aqRX5OYWG6HBZ5TVR//OdpEZ2CQ=
 github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.30 h1:/Z5jmNrKsSD7EmDjzAPsm/3L9IuOkzaynklJZ1qX7S4=
 github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.30/go.mod h1:lEzEZnOosE7zi8Z6royW1cFJTD9fpab4Ul1SBrllewk=
-github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.39.1 h1:If/jSXTzhXnHecL0AdCmZhX1YBcggkaErYHbQQ8pVHU=
-github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.39.1/go.mod h1:XN0sN+BBPJkv9HppOBDejcwFJyv1szohpIJwUT3HJ98=
+github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.40.0 h1:Za+T68Uvr2F52+7EljV4Hhad12BQIB4yrY52TWkSIfY=
+github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.40.0/go.mod h1:XN0sN+BBPJkv9HppOBDejcwFJyv1szohpIJwUT3HJ98=
 github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.38.2 h1:bN/D4C9GZFvn1ums0EWiLSFFlXtvGgWyGBQc4nP7hds=
 github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.38.2/go.mod h1:bMwtmyQqPd3tCLce1VBn+8kDQguCzSZ1a00T64UEUGQ=
 github.com/aws/aws-sdk-go-v2/service/signin v1.4.1 h1:V7ZZ300WPXGjvkyore5DGe0ljVPOxCXie/thWdtSBXE=
