@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: fulfillment
-        image: gsoci.azurecr.io/giantswarm/fulfillment:{{ .Chart.Version }}
+        image: gsoci.azurecr.io/giantswarm/fulfillment:{{ .Chart.AppVersion }}
         args: ["server"]
         resources:
           requests:
