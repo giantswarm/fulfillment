@@ -3,6 +3,7 @@ package handlers
 import (
 	"fmt"
 	"net/http"
+	"net/url"
 )
 
 func Webhook(w http.ResponseWriter, r *http.Request) {
@@ -17,7 +18,7 @@ func Webhook(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	url := fmt.Sprintf("/?token=%s", token)
+	target := "/?" + url.Values{"token": {token}}.Encode()
 
-	http.Redirect(w, r, url, http.StatusSeeOther)
+	http.Redirect(w, r, target, http.StatusSeeOther)
 }
