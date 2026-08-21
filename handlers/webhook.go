@@ -3,6 +3,7 @@ package handlers
 import (
 	"fmt"
 	"net/http"
+	"net/url"
 )
 
 func Webhook(w http.ResponseWriter, r *http.Request) {
@@ -17,7 +18,15 @@ func Webhook(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	url := fmt.Sprintf("/?token=%s", token)
+	// Build the redirect target out of a fixed relative path plus a properly
+	// encoded query, rather than interpolating the token into a string. The
+	// caller-supplied token can then only ever be a query parameter value, and
+	// it survives the round trip intact: AWS marketplace tokens are base64, and
+	// an unencoded "+" would otherwise be read back as a space by the / handler.
+	redirect := url.URL{
+		Path:     "/",
+		RawQuery: url.Values{"token": []string{token}}.Encode(),
+	}
 
-	http.Redirect(w, r, url, http.StatusSeeOther)
+	http.Redirect(w, r, redirect.String(), http.StatusSeeOther)
 }
