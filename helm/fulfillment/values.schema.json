@@ -1,9 +1,11 @@
 {
-    "$schema": "http://json-schema.org/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
         "aws": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
                 "access_key_id": {
                     "type": "string"
@@ -13,14 +15,21 @@
                 }
             }
         },
+        "global": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "description": "Global values shared between all subcharts",
+            "$comment": "Added automatically by 'helm schema' to allow this chart to be used as a Helm dependency, as the `additionalProperties` setting would otherwise collide with Helm's special 'global' values key."
+        },
         "ingress": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
-                "enabled": {
-                    "type": "boolean"
-                },
                 "annotations": {
                     "type": "object",
+                    "additionalProperties": false,
                     "properties": {
                         "cert-manager.io/cluster-issuer": {
                             "type": "string"
@@ -29,71 +38,80 @@
                             "type": "string"
                         }
                     }
+                },
+                "enabled": {
+                    "type": "boolean"
                 }
             }
         },
         "route": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
-                "enabled": {
-                    "type": "boolean"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "kind": {
-                    "type": "string"
+                "additionalRules": {
+                    "type": "array"
                 },
                 "annotations": {
-                    "type": "object"
+                    "type": "object",
+                    "additionalProperties": false
                 },
-                "labels": {
-                    "type": "object"
-                },
-                "hostnames": {
-                    "type": "array"
-                },
-                "parentRefs": {
-                    "type": "array"
-                },
-                "matches": {
-                    "type": "array"
+                "enabled": {
+                    "type": "boolean"
                 },
                 "filters": {
                     "type": "array"
                 },
-                "additionalRules": {
+                "hostnames": {
+                    "type": "array"
+                },
+                "kind": {
+                    "type": "string"
+                },
+                "labels": {
+                    "type": "object",
+                    "additionalProperties": false
+                },
+                "matches": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "path": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "type": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "parentRefs": {
                     "type": "array"
                 },
                 "securityPolicy": {
                     "type": "object",
+                    "additionalProperties": false,
                     "properties": {
+                        "annotations": {
+                            "type": "object",
+                            "additionalProperties": false
+                        },
                         "enabled": {
                             "type": "boolean"
                         },
                         "labels": {
-                            "type": "object"
-                        },
-                        "annotations": {
-                            "type": "object"
-                        },
-                        "basicAuth": {
-                            "type": "object"
-                        },
-                        "cors": {
-                            "type": "object"
-                        },
-                        "jwt": {
-                            "type": "object"
-                        },
-                        "oidc": {
-                            "type": "object"
-                        },
-                        "extAuth": {
-                            "type": "object"
-                        },
-                        "authorization": {
-                            "type": "object"
+                            "type": "object",
+                            "additionalProperties": false
                         }
                     }
                 }
@@ -101,6 +119,7 @@
         },
         "slack": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
                 "token": {
                     "type": "string"
