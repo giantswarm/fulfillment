@@ -6,7 +6,7 @@ toolchain go1.27.1
 
 require (
 	github.com/aws/aws-sdk-go-v2 v1.45.1
-	github.com/aws/aws-sdk-go-v2/config v1.33.1
+	github.com/aws/aws-sdk-go-v2/config v1.33.2
 	github.com/aws/aws-sdk-go-v2/credentials v1.20.2
 	github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.44.0
 	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.43.0
