@@ -1,0 +1,19 @@
+# Values for the app-test-suite smoke (tests/ats/test_smoke.py) on the bare kind cluster
+# the generated execute-chart-tests job creates. Layered over the chart defaults, see
+# .ats/main.yaml (app-tests-app-config-file).
+
+image:
+  # Branch builds publish no image (build-image runs with push: false) and the orb stamps
+  # appVersion with the dev version, so the chart's default tag exists in no registry.
+  # Pin the latest release; bump it when the chart needs a newer image.
+  tag: "0.0.29"
+
+# The server refuses to start on empty credentials (log.Fatalf in cmd/server.go). Static
+# AWS credentials and the Slack token are only validated on use, and the smoke calls
+# nothing, so placeholders keep the process alive. The default Ingress stays enabled to
+# cover its template; nothing serves it on kind.
+aws:
+  access_key_id: smoke
+  secret_access_key: smoke
+slack:
+  token: smoke
