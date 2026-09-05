@@ -1,4 +1,12 @@
-# ATS (app-test-suite) config for the generated execute-chart-tests CI job.
-# This repo has no ATS test scenarios yet; skip the scenario steps so the
-# chart validation part of ATS can pass. Remove skip-steps when tests exist.
-skip-steps: [smoke,functional,upgrade]
+# app-test-suite (ats >= 1.0) config for the generated execute-chart-tests CircleCI job.
+# ats creates a kind cluster, applies its bundled CRDs, installs the packaged chart with
+# `helm upgrade --install --wait` and runs `uv run pytest -m smoke` in tests/ats.
+#
+# The chart hard-codes `namespace: fulfillment` on its resources, so the release must go
+# there.
+app-tests-deploy-namespace: fulfillment
+app-tests-app-config-file: tests/ats/smoke-values.yaml
+
+# functional: no functional tests yet.
+# upgrade: needs upgrade-tests-app-catalog-url pointing at the released chart; not wired.
+skip-steps: [functional, upgrade]

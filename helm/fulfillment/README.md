@@ -8,6 +8,9 @@ A Helm chart for fulfillment
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| image.registry | string | `"gsoci.azurecr.io"` |  |
+| image.name | string | `"giantswarm/fulfillment"` |  |
+| image.tag | string | `""` |  |
 | aws.access_key_id | string | `""` |  |
 | aws.secret_access_key | string | `""` |  |
 | ingress.enabled | bool | `true` |  |
