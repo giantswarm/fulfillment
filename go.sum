@@ -18,8 +18,8 @@ github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.14.6 h1:LHHdobjo5
 github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.14.6/go.mod h1:CBGB0evAiaMD3Lk4wPO7LQCcCZLuhzL5Qf/wfEUHQ5w=
 github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.46.4 h1:iFJoejRqDdiG5w6PlFwlMNA4n7uMaQ5aGyDX/5tXsfA=
 github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.46.4/go.mod h1:55dAtCP1dZ4MZ+a9/4tnx6bgO7wR3KL+nDIc5ounqQ4=
-github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.46.1 h1:UBGvPkvBX2zj4NUnEuqzZQsqSxNf0zQLuWW1E0pCUGk=
-github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.46.1/go.mod h1:Fmb0SDxdIK+wBPIFlE5xs2YTHbiO+wHuel7quzzdQzk=
+github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.46.2 h1:bYcDlzrqYLzUONG2ZGHOS6zTXS/thQw5O93XkenmDco=
+github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.46.2/go.mod h1:Fmb0SDxdIK+wBPIFlE5xs2YTHbiO+wHuel7quzzdQzk=
 github.com/aws/aws-sdk-go-v2/service/signin v1.10.4 h1:tvpDjuUvgKURf3Yk4hOaGbZ4QdY+070OWcA5d6LUv2A=
 github.com/aws/aws-sdk-go-v2/service/signin v1.10.4/go.mod h1:3ibVKg5Ng82Zby8++jELTD2nHxiPk2DJRLEeW/LKp8M=
 github.com/aws/aws-sdk-go-v2/service/sso v1.38.4 h1:ChCtagixSFOxltv0o6E3NT8F7ksvZtZGPwUBynO5Nmk=
